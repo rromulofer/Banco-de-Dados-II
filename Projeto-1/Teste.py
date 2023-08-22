@@ -3,6 +3,7 @@ import sqlite3
 # Conectando ao banco de dados (será criado se não existir)
 banco = sqlite3.connect('concessionaria.db')
 
+# "Ponte" entre o python e o banco de dados, usado para executar comandos
 cursor = banco.cursor()
 
 # Criando a tabela de Clientes
