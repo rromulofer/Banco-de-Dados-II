@@ -65,7 +65,7 @@ cursor = banco.cursor()
 # # Inserindo dados na tabela de Moto
 # moto_data = [
 #     ('Ninja 300', 2022, 32000.0, 'Azul', 1),  
-#     ('CBR 650R', 2021, 245000.0, 'Vermelho', 2),  
+#     ('CBR 650R', 2021, 24500.0, 'Vermelho', 2),  
 #     ('MT-07', 2023, 44000.0, 'Preto', 3),  
 #     ('YZF-R6', 2022, 38000.0, 'Branco', 4),  
 #     ('Duke 390', 2023, 50000.0, 'Laranja', 5),  
@@ -112,7 +112,7 @@ banco.commit()
 # for row in cursor:
 #     print(row)
 
-# # COmpras
+# # Compras
 # cursor = banco.execute("SELECT * FROM Compra")
 # print("\nTabela Compra:")
 # for row in cursor:
@@ -136,11 +136,11 @@ banco.commit()
 # total_gasto = cursor.fetchone()[0]
 # print(f"Total gasto pelo cliente ID {cliente_id}: R${total_gasto:.2f}")
 
-# # Encontrar a moto mais cara
+# # Encontrar a moto mais barata
 # cursor.execute("SELECT * FROM Moto ORDER BY Preco DESC LIMIT 1")
-# moto_mais_cara = cursor.fetchone()
-# print("Moto mais cara:")
-# print(moto_mais_cara)
+# moto_mais_barata = cursor.fetchone()
+# print("Moto mais barata:")
+# print(moto_mais_barata)
 
 
 # Fechando a conexão
