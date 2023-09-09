@@ -74,7 +74,11 @@ cursor = banco.cursor()
 # cursor.executemany("INSERT INTO Moto (Modelo, Ano, Preco, Cor, IDCompra) VALUES (?, ?, ?, ?, ?)", moto_data)
 
 
+<<<<<<< Updated upstream
 # # Deletando clientes menores de idade
+=======
+# Deletando clientes menores de idade
+>>>>>>> Stashed changes
 # try:
 #     cursor.execute("DELETE from Clientes WHERE Idade < 18")
 #     print("Os dados foram deletados com sucesso!")
@@ -82,6 +86,7 @@ cursor = banco.cursor()
 #     print("Erro ao deletar os dados:", erro)
 
 
+<<<<<<< Updated upstream
 # # Número de clientes menores de idade
 # cursor.execute("SELECT COUNT(*) FROM Clientes WHERE Idade <= 18")
 # num_clientes_maiores = cursor.fetchone()[0]
@@ -99,11 +104,17 @@ cursor = banco.cursor()
 # Atualizando dados
 # cursor.execute("UPDATE Clientes SET Idade = 35 WHERE Nome = 'Fernanda Lima'")
 # cursor.execute("UPDATE Moto SET Preco = 45000.0 WHERE IDMoto = 2")
+=======
+# Atualizando dados
+# cursor.execute("UPDATE Clientes SET Idade = 35 WHERE Nome = 'Fernanda Lima'")
+
+>>>>>>> Stashed changes
 
 # Commit das alterações
 banco.commit()
 
 
+<<<<<<< Updated upstream
 # CONSULTAS
 
 # # Clientes
@@ -111,6 +122,13 @@ banco.commit()
 # print("Tabela Clientes:")
 # for row in cursor:
 #     print(row)
+=======
+# Consulta 
+cursor = banco.execute("SELECT * FROM Clientes")
+print("Tabela Clientes:")
+for row in cursor:
+    print(row)
+>>>>>>> Stashed changes
 
 # # Compras
 # cursor = banco.execute("SELECT * FROM Compra")
@@ -130,6 +148,7 @@ banco.commit()
 # for row in cursor:
 #     print(row)
 
+<<<<<<< Updated upstream
 # # Valor total gasto por um cliente específico
 # cliente_id = 3  
 # cursor.execute("SELECT SUM(Valor) FROM Compra WHERE IDCliente = ?", (cliente_id,))
@@ -143,5 +162,7 @@ banco.commit()
 # print(moto_mais_barata)
 
 
+=======
+>>>>>>> Stashed changes
 # Fechando a conexão
 banco.close()
