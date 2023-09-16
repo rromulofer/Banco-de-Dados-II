@@ -95,6 +95,25 @@ cursor = banco.cursor()
 # ]
 # cursor.executemany("INSERT INTO Moto (Modelo, Ano, Preco, Cor, IDCompra) VALUES (?, ?, ?, ?, ?)", moto_data)
 
+# # Deletando clientes menores de idade
+
+# Deletando clientes menores de idade
+
+
+# try:
+#     cursor.execute("DELETE from Clientes WHERE Idade < 18")
+#     print("Os dados foram deletados com sucesso!")
+# except sqlite3.Error as erro:
+#     print("Erro ao deletar os dados:", erro)
+
+
+
+# # Número de clientes menores de idade
+# cursor.execute("SELECT COUNT(*) FROM Clientes WHERE Idade <= 18")
+# num_clientes_maiores = cursor.fetchone()[0]
+# print(f"Número de clientes menores de idade: {num_clientes_maiores}")
+
+
 # Deletando uma moto pelo seu ID
 # try:
 #     moto_id_para_deletar = 3 ]
@@ -107,6 +126,12 @@ cursor = banco.cursor()
 # cursor.execute("UPDATE Clientes SET Idade = 35 WHERE Nome = 'Fernanda Lima'")
 # cursor.execute("UPDATE Moto SET Preco = 45000.0 WHERE IDMoto = 2")
 
+
+# Atualizando dados
+# cursor.execute("UPDATE Clientes SET Idade = 35 WHERE Nome = 'Fernanda Lima'")
+
+
+
 # Atualizando compra de moto
 # try:
 #     cursor.execute("UPDATE Moto SET IDCompra = ? WHERE IDMoto = ?", (11, 11))
@@ -117,7 +142,6 @@ cursor = banco.cursor()
 # Commit das alterações
 banco.commit()
 
-
 # CONSULTAS
 
 # # Clientes
@@ -125,6 +149,14 @@ banco.commit()
 # print("Tabela Clientes:")
 # for row in cursor:
 #     print(row)
+
+
+# # Consulta 
+# cursor = banco.execute("SELECT * FROM Clientes")
+# print("Tabela Clientes:")
+# for row in cursor:
+#     print(row)
+
 
 # # Compras
 # cursor = banco.execute("SELECT * FROM Compra")
