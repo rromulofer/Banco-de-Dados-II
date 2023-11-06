@@ -140,7 +140,7 @@ root = tk.Tk()
 root.title("BANCO DE DADOS - CONCESSIONARIA DE MOTOS")
 
 # Tamanho da janela
-root.geometry("700x450")
+root.geometry("300x450")
 
 
 # Notebook para abas
