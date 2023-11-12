@@ -1,3 +1,9 @@
+#  Prof. Luis Mariano del Val Cura
+#  Disciplina : Banco de Dados 2
+#  UENF-CCT-LCMAT-CC
+#  Data: Novembro 2023
+#  Autor: Rômulo Souza Fernandes
+
 import sqlite3
 import tkinter as tk
 from tkinter import messagebox
@@ -5,7 +11,7 @@ from tkinter import Scrollbar
 from tkinter import *
 from tkinter import ttk
 
-banco = sqlite3.connect("concessionaria2.db")
+banco = sqlite3.connect("concessionaria-ROMULO.db")
 cursor = banco.cursor()
 
 # Função para atualizar moto
@@ -44,20 +50,6 @@ def adicionar_moto(cursor, banco):
         messagebox.showinfo("Sucesso", "Moto adicionada com sucesso!")
     except sqlite3.Error as erro:
         messagebox.showerror("Erro", f"Erro ao adicionar moto: {erro}")
-
-# # Função para consultar motos
-# def consultar_moto(cursor, banco):
-#     try:
-#         cursor.execute("SELECT * FROM Moto")
-#         resultados = cursor.fetchall()
-#         resultado_text.config(state=tk.NORMAL)
-#         resultado_text.delete("1.0", tk.END)
-#         for resultado in resultados:
-#             resultado_text.insert(tk.END, f"ID: {resultado[0]}, Modelo: {resultado[1]}, Ano: {resultado[2]}, "
-#                                           f"Preço: {resultado[3]}, Cor: {resultado[4]}, IDCompra: {resultado[5]}\n")
-#         resultado_text.config(state=tk.DISABLED)
-#     except sqlite3.Error as erro:
-#         messagebox.showerror("Erro", f"Erro ao consultar moto: {erro}")
 
 def atualizar_cliente(cursor, banco):
     try:
